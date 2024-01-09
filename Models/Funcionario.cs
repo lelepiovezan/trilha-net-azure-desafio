@@ -1,6 +1,9 @@
+using Azure;
+using Azure.Data.Tables;
+
 namespace TrilhaNetAzureDesafio.Models
 {
-    public class Funcionario
+    public class Funcionario : ITableEntity
     {
         public Funcionario() { }
 
@@ -24,5 +27,9 @@ namespace TrilhaNetAzureDesafio.Models
         public string Departamento { get; set; }
         public decimal Salario { get; set; }
         public DateTimeOffset? DataAdmissao { get; set; }
+        public string PartitionKey { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string RowKey { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTimeOffset? Timestamp { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ETag ETag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
